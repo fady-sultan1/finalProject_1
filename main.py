@@ -23,3 +23,7 @@ class Student:
         self.student_number = student_number
         self.courses_list = []
         Student.total_students += 1
+
+    def enroll_course(self, course_name, course_mark):
+        course = Course(course_name, course_mark)
+        self. courses_list.append(course)
