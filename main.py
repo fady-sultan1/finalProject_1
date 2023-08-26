@@ -27,3 +27,7 @@ class Student:
     def enroll_course(self, course_name, course_mark):
         course = Course(course_name, course_mark)
         self. courses_list.append(course)
+
+    def get_student_courses(self):
+        for course in self.courses_list:
+            print(f"Course: {course.course_name}, Mark: {course.course_mark}")
