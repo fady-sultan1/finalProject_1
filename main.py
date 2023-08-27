@@ -31,3 +31,12 @@ class Student:
     def get_student_courses(self):
         for course in self.courses_list:
             print(f"Course: {course.course_name}, Mark: {course.course_mark}")
+
+    def get_student_average(self):
+        total_marks = 0
+        for course in self.courses_list:
+            total_marks += course.course_mark
+        return total_marks / len(self.courses_list) if len(self.courses_list) > 0 else 0
+
+    def get_student_details(self):
+        return self.__dict__
