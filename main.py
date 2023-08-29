@@ -49,8 +49,28 @@ while True:
                               "2.Delete Student\n"
                               "3.Display Student\n"
                               "4.Get Student Average\n"
-                              "5.Add Course to student with mark.\n"
+                              "5.Add Course to student with mark\n"
                               "6.Exit"))
     except ValueError:
         print("Invalid input. Please enter a valid option.")
         continue
+
+    if selection == 1:
+        student_number = input("Enter Student Number: ")
+        student_exists = any(student.student_number == student_number for student in students)
+
+        if student_exists:
+            print("Student with the given number already exists.")
+            continue
+
+        student_name = input("Enter Student Name: ")
+        while True:
+            try:
+                student_age = int(input("Enter Student Age: "))
+                break
+            except ValueError:
+                print("Invalid Age Please enter a valid age")
+
+        new_student = Student(student_name, student_age, student_number)
+        students.append(new_student)
+        print("Student Added Successfully")
