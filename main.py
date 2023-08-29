@@ -74,3 +74,19 @@ while True:
         new_student = Student(student_name, student_age, student_number)
         students.append(new_student)
         print("Student Added Successfully")
+
+    elif selection == 2:
+        student_number = input("Enter Student Number: ")
+        student_found = None
+
+        for student in students:
+            if student.student_number == student_number:
+                student_found = student
+                break
+
+        if student_found:
+            students.remove(student_found)
+            print("Student Deleted Successfully")
+        else:
+            print("Student Not Exist")
+
