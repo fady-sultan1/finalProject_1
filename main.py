@@ -42,3 +42,15 @@ class Student:
         return self.__dict__
 
 students = []
+
+while True:
+    try:
+        selection = int(input("1.Add New Student\n"
+                              "2.Delete Student\n"
+                              "3.Display Student\n"
+                              "4.Get Student Average\n"
+                              "5.Add Course to student with mark.\n"
+                              "6.Exit"))
+    except ValueError:
+        print("Invalid input. Please enter a valid option.")
+        continue
