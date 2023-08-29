@@ -40,3 +40,5 @@ class Student:
 
     def get_student_details(self):
         return self.__dict__
+
+students = []
