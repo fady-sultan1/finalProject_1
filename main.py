@@ -90,3 +90,19 @@ while True:
         else:
             print("Student Not Exist")
 
+    elif selection == 3:
+        student_number = input("Enter Student Number: ")
+        student_found = None
+
+        for student in students:
+            if student.student_number == student_number:
+                student_found = student
+                break
+
+        if student_found:
+            print("Student Details:")
+            print(student_found.get_student_details())
+            print("Courses:")
+            student_found.get_student_courses()
+        else:
+            print("Student Not Exist")
