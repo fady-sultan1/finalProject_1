@@ -138,3 +138,7 @@ while True:
             print("Course Added Successfully")
         else:
             print("Student Not Exist")
+
+    elif selection == 6:
+        print("Exiting the program.")
+        break
