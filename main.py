@@ -142,3 +142,6 @@ while True:
     elif selection == 6:
         print("Exiting the program.")
         break
+
+    else:
+        print("Invalid selection Please select a valid option.")
