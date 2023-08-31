@@ -121,3 +121,20 @@ while True:
             print(f"Student Average: {average}")
         else:
             print("Student Not Exist")
+
+    elif selection == 5:
+        student_number = input("Enter Student Number: ")
+        student_found = None
+
+        for student in students:
+            if student.student_number == student_number:
+                student_found = student
+                break
+
+        if student_found:
+            course_name = input("Enter Course Name: ")
+            course_mark = float(input("Enter Course Mark: "))
+            student_found.enroll_course(course_name, course_mark)
+            print("Course Added Successfully")
+        else:
+            print("Student Not Exist")
